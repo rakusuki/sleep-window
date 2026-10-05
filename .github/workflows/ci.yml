@@ -1,0 +1,20 @@
+name: Swift CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: macos-26
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Toolchain
+        run: xcodebuild -version && swift --version
+      - name: Core tests
+        run: swift test --package-path Core
+      - name: iOS simulator build
+        run: xcodebuild -project SleepWindow.xcodeproj -scheme SleepWindow -sdk iphonesimulator -destination 'generic/platform=iOS Simulator' -configuration Debug CODE_SIGNING_ALLOWED=NO build
