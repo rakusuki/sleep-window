@@ -1,6 +1,6 @@
 # Sleep Window — iPhone + Apple Watch 睡眠履歴アラーム
 
-**v0.1.0 / ソースコード試作版。Xcodeでのビルド・実機動作は未検証です。**
+**v0.1.0 / ソースコード試作版。GitHub ActionsでCoreテスト12件と署名なしiOSシミュレータビルド成功。実機動作は未検証です。**
 
 Apple Watchが標準機能で記録した睡眠段階をiPhoneのHealthKitから読み込み、履歴を表示します。指定時刻、または履歴から計算して利用者が確認した時刻に、AlarmKitで1回のアラームを予約します。
 

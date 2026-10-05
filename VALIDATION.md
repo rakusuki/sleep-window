@@ -1,6 +1,8 @@
 # 検証状況
 
-作成環境はLinuxで、Swift・Xcode・iOS SDK・接続されたiPhone/Watchがありません。
+作成環境はLinuxです。2026-10-05にGitHub Actionsのmacos-26でCoreテスト12件と署名なしiOSシミュレータビルドが成功しました。接続されたiPhone/Watchでの検証は未実施です。
+
+CI: https://github.com/rakusuki/sleep-window/actions/runs/37258969270
 
 実施済み：
 - plist/entitlementsのXMLと型の検査。
@@ -10,9 +12,7 @@
 - ZIPの整合性検査。
 
 未実施：
-- Swiftのコンパイル・型検査。
-- 同梱の12件のSwiftテストの実行。
-- Xcodeビルド、署名、UI描画、iPhone/Watchでの機能検証。
+- 実機向け署名、UI描画、iPhone/Watchでの機能検証。
 - 履歴予測による起床快適性の検証。
 
 ## 実機で確認する項目
